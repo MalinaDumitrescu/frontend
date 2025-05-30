@@ -1,0 +1,330 @@
+/* ------------------ Dashboard.css ------------------ */
+
+:root {
+    --primary-color: #4CAF50;
+    --primary-color-hover: #388E3C;
+    --button-text: #ffffff;
+    --bg-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #cccccc;
+    --text-color: #111111;
+    --done-bg: #e8fdee;
+    --done-border: #34c759;
+    --done-text: #111111;
+}
+
+[data-theme='dark'] {
+    --primary-color: #4CAF50;
+    --primary-color-hover: #43a047;
+    --button-text: #ffffff;
+    --bg-color: #1c1c1c;
+    --card-bg: #2a2a2a;
+    --input-bg: #333333;
+    --input-border: #555555;
+    --text-color: #f0f0f0;
+    --done-bg: #2a452a;
+    --done-border: #34c759;
+    --done-text: #d0ffd0;
+}
+
+.dashboard-container {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dashboard-section {
+    margin-bottom: 2rem;
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    min-width: 160px;
+    flex: 1;
+}
+
+.dashboard-section input,
+.dashboard-section textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.journal-title-input {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.journal-content-textarea {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.journal-mood-selector {
+    margin-bottom: 1rem;
+}
+
+
+
+input[type="file"] {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    padding: 0.5rem;
+    color: var(--text-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+
+.dashboard-section button {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-section button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.dashboard-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.mark-done-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--done-bg);
+    border: 1px dashed var(--done-border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--done-text);
+}
+
+.mark-done-container input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--done-border);
+    border-radius: 6px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+[data-theme='dark'] .mark-done-container input[type="checkbox"] {
+    background-color: #333;
+}
+
+.mark-done-container input[type="checkbox"]::before {
+    content: "✓";
+    font-size: 14px;
+    color: white;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.mark-done-container input[type="checkbox"]:checked {
+    background-color: #34c759;
+    border-color: #34c759;
+}
+
+.mark-done-container input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.habit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.habit-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.habit-daily {
+    color: teal;
+    font-weight: 600;
+}
+
+.habit-one-time {
+    color: crimson;
+    font-weight: 600;
+}
+
+.habit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.habit-actions button {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.habit-actions button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    .dashboard-section button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .habit-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .habit-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+
+
+
+
+    /* ------------------ Progress Bar ------------------ */
+    .progress-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .progress-text {
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: var(--text-color);
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 16px;
+        background-color: #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .progress-fill {
+        height: 100%;
+        background-color: var(--primary-color);
+        transition: width 0.4s ease-in-out;
+    }
+
+    .add-journal-btn-container {
+        margin-top: 0.5rem;
+    }
+
+
+    .mood-actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .mood-selector + button {
+        display: block;
+        margin: 0 auto 2rem auto;
+    }
+
+
+    input[type="file"] {
+        background-color: var(--input-bg);
+        border: 1px solid var(--input-border);
+        padding: 0.5rem;
+        color: var(--text-color);
+        border-radius: 8px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+
+    .journal-entry-title {
+        font-size: 1.6rem;     /* poți crește la 1.6rem sau 1.8rem dacă vrei mai mare */
+        font-weight: 700;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+    }
+
+
+}

@@ -1,0 +1,210 @@
+/* Container principal */
+.progress-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .progress-container {
+        padding: 1rem;
+    }
+}
+
+.month-select {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 250px;
+}
+
+.calendar-wrapper {
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme="light"] .calendar-wrapper {
+    background-color: #ffffff;
+}
+
+body[data-theme="dark"] .calendar-wrapper {
+    background-color: #1e1e1e;
+}
+
+.react-calendar {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.react-calendar__navigation button {
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    font-weight: bold;
+}
+
+.react-calendar__tile {
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+/* Ziua curentă */
+.react-calendar__tile--now {
+    border: 2px solid #ffeb3b;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #ffff8d;
+    color: #000 !important;
+}
+
+/* Zi activă (selectată) */
+.react-calendar__tile--active {
+    background-color: #1b5e20 !important;
+    color: white !important;
+}
+
+/* Weekend */
+.react-calendar__month-view__days__day--weekend {
+    color: #ffcccb;
+}
+
+/* Mood dots */
+.mood-happy {
+    background: #ffeb3b !important;
+    color: #000 !important;
+    border-radius: 50%;
+}
+.mood-ok {
+    background: #90caf9 !important;
+    color: #000 !important;
+    border-radius: 50%;
+}
+.mood-stressed {
+    background: #ff8a65 !important;
+    color: #fff !important;
+    border-radius: 50%;
+}
+.mood-sad {
+    background: #9575cd !important;
+    color: #fff !important;
+    border-radius: 50%;
+}
+
+/* Legendă */
+.legend {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.legend span {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+body[data-theme="light"] .legend,
+body[data-theme="light"] .legend span,
+body[data-theme="light"] .legend strong {
+    color: #000;
+}
+
+body[data-theme="dark"] .legend,
+body[data-theme="dark"] .legend span,
+body[data-theme="dark"] .legend strong {
+    color: #fff;
+}
+
+/* Linie de separare */
+.chart-divider {
+    margin: 2rem 0;
+}
+
+/* ================= VIZIBILITATE ZILE ================= */
+
+/* Vizibilitate generală zile */
+body[data-theme='light'] .react-calendar__tile,
+body[data-theme='light'] .react-calendar__tile abbr,
+body[data-theme='light'] .react-calendar__month-view__days__day,
+body[data-theme='light'] .react-calendar__month-view__days__day abbr {
+    color: #000 !important;
+}
+
+body[data-theme='dark'] .react-calendar__tile,
+body[data-theme='dark'] .react-calendar__tile abbr,
+body[data-theme='dark'] .react-calendar__month-view__days__day,
+body[data-theme='dark'] .react-calendar__month-view__days__day abbr {
+    color: #fff !important;
+}
+
+/* Zile din alte luni */
+body[data-theme='light'] .react-calendar__tile--neighboringMonth {
+    color: #555 !important;
+}
+
+body[data-theme='dark'] .react-calendar__tile--neighboringMonth {
+    color: #ccc !important;
+}
+
+/* Ziua curentă & selectată în Light Mode */
+body[data-theme="light"] .react-calendar__tile--now,
+body[data-theme="light"] .react-calendar__tile--active,
+body[data-theme="light"] .react-calendar__tile--hasActive {
+    color: #111 !important;
+}
+
+/* Cifrele zilelor în Light Mode */
+body[data-theme="light"] .react-calendar__tile abbr {
+    color: #000 !important;
+}
+
+/* Cifrele zilelor în Dark Mode */
+body[data-theme="dark"] .react-calendar__tile abbr {
+    color: #fff !important;
+}
+
+
+/* ===================== LUNA VIZIBILĂ ÎN CALENDAR ===================== */
+
+/* Light mode - text negru */
+body[data-theme="light"] .react-calendar__navigation button,
+body[data-theme="light"] .react-calendar__navigation button abbr {
+    color: #000 !important;
+}
+
+/* Dark mode - text alb */
+body[data-theme="dark"] .react-calendar__navigation button,
+body[data-theme="dark"] .react-calendar__navigation button abbr {
+    color: #fff !important;
+}
+
+
+
+
+/* Culori text în legendă corespunzătoare mood-urilor */
+.legend-item.happy {
+    color: #ffeb3b !important;
+}
+
+.legend-item.ok {
+    color: #90caf9 !important;
+}
+
+.legend-item.stressed {
+    color: #ff8a65 !important;
+}
+
+.legend-item.sad {
+    color: #9575cd !important;
+}
+

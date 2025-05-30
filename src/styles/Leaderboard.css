@@ -1,0 +1,126 @@
+.leaderboard-container {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.leaderboard-list {
+    list-style: none;
+    padding: 0;
+}
+
+.leaderboard-card {
+    background-color: #f0f8ff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.leaderboard-button {
+    padding: 0.5rem 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.small-btn {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.suggestion-list {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    max-width: 250px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-list li {
+    padding: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.suggestion-list li:hover {
+    background-color: #e6f7ff;
+}
+
+.notification-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f0ffe0;
+    border: 1px solid #9acd32;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.notification {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #4a6d00;
+}
+
+.small-btn.danger {
+    background-color: #e53935;
+    margin-left: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+.chat-window {
+    margin-top: 2rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fefefe;
+}
+
+.chat-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.msg {
+    padding: 0.4rem;
+    margin: 0.2rem 0;
+}
+
+.msg.from {
+    background-color: #e1f5fe;
+}
+
+.msg.to {
+    background-color: #dcedc8;
+    text-align: right;
+}
